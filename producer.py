@@ -26,7 +26,7 @@ def write_to_file(category: str, contents: any) -> None:
     path = os.path.join(FILE_STORAGE_PATH, category)
 
     with open(path, 'a') as file:
-        file.writelines([str(contents)])
+        file.writelines([str(contents) + os.linesep])
 
 
 def produce_signals(category: str, sleep_len: int, minutes: int, lo: int, hi: int) -> None:
